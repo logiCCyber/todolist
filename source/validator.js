@@ -5,10 +5,10 @@ const validator = {
         body("description").notEmpty().withMessage("enter discription"),
         body("status").isLowercase().withMessage("enter lowercase")
     ],
-    putValidator: function() {
+    putValidator: [
         body("description").optional().isEmpty().withMessage("enter discription"),
         body("status").optional().isLowercase().withMessage("enter lowercase")
-    },
+    ],
     result: validationResult
 }
 
